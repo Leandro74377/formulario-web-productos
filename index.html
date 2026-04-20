@@ -89,7 +89,7 @@
   </div>
 
 <script>
-    // Función para calcular el total automáticamente
+    
     const precioUnitario = document.getElementById("precioUnitario");
     const cantidad = document.getElementById("cantidad");
     const precioTotal = document.getElementById("precioTotal");
@@ -104,7 +104,7 @@
         precioTotal.value = total.toFixed(2);
     }
 
-    // Función para guardar el producto en la tabla
+   
     function guardarProducto() {
         let id = document.getElementById("idProducto").value.trim();
         let nombre = document.getElementById("nombreProducto").value.trim();
@@ -118,7 +118,6 @@
             return;
         }
 
-        // Crear la fila de la tabla
         let fila = `
             <tr>
                 <td>${id}</td>
@@ -132,12 +131,10 @@
 
         document.getElementById("tablaProductos").innerHTML += fila;
 
-        // Limpiar el formulario
         document.getElementById("formProducto").reset();
         precioTotal.value = "";
     }
 
-    // Ejemplo de función para limpiar total después de un tiempo (opcional)
     function limpiarTotal() {
         setTimeout(() => {
             precioTotal.value = "";
